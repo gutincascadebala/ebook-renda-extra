@@ -1,96 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compre o Guia de Renda Extra</title>
+  <title>Guia de Renda Extra</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #eee;
+      background-color: #0d0d0d;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      background-color: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
       text-align: center;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #00ffd5;
     }
 
     p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      color: #ccc;
     }
 
-    .buy-button {
-      background-color: #00c3ff;
+    .price {
+      background: #00ffd5;
       color: #000;
-      padding: 15px 25px;
-      border: none;
+      padding: 10px 20px;
       border-radius: 8px;
       font-size: 1.1rem;
       font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
       display: inline-block;
+      margin-bottom: 25px;
     }
 
-    .buy-button:hover {
-      background-color: #00a8e0;
-    }
-
-    .payment-page {
-      display: none;
-      margin-top: 40px;
-      background-color: #222;
-      padding: 30px;
+    .pix-box {
+      background-color: #262626;
+      padding: 20px;
       border-radius: 10px;
-    }
-
-    .qr {
-      margin: 20px 0;
-    }
-
-    .pix-code {
+      margin-bottom: 25px;
+      border: 1px solid #333;
+      font-size: 1.1rem;
+      color: #00ffd5;
       word-break: break-word;
-      background-color: #333;
-      color: #0f0;
-      padding: 15px;
-      border-radius: 10px;
-      font-family: monospace;
-      font-size: 0.95rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #00ffd5;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #00c9ab;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Guia Prático: Ganhe Dinheiro em Casa</h1>
-    <p>Adquira agora por apenas <strong>R$ 5,00</strong> e descubra maneiras reais e acessíveis de gerar renda usando apenas seu celular ou computador.</p>
-    <a class="buy-button" onclick="mostrarPagamento()">Comprar Agora</a>
+    <p>Com apenas R$ 5,00 você recebe um guia direto, prático e fácil de seguir com ideias reais para gerar renda usando seu celular ou computador.</p>
 
-    <div id="pagamento" class="payment-page">
-      <h2>Pagamento via PIX</h2>
-      <p>Escaneie o QR Code abaixo ou copie o código PIX:</p>
-      <div class="qr">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=00020126360014BR.GOV.BCB.PIX0114+558598228543052040000530398654045.005802BR5925Jose%20Gutemberg%20Cordeiro%20A6009SAO%20PAULO62140510R8BhBNDB0X63046152" alt="QR Code PIX">
-      </div>
-      <p class="pix-code">00020126360014BR.GOV.BCB.PIX0114+558598228543052040000530398654045.005802BR5925Jose Gutemberg Cordeiro A6009SAO PAULO62140510R8BhBNDB0X63046152</p>
+    <div class="price">Apenas R$ 5,00</div>
+
+    <p>Realize o pagamento via PIX usando a chave abaixo:</p>
+
+    <div class="pix-box">
+      CHAVE PIX:<br>
+      <strong>85982285430</strong>
+    </div>
+
+    <p>Após o pagamento, envie o comprovante e receba o e-book direto no seu WhatsApp:</p>
+    <a href="https://wa.me/5585982285430" class="cta-button">📩 Enviar Comprovante</a>
+
+    <div class="footer">
+      Suporte rápido | Entrega garantida
     </div>
   </div>
-
-  <script>
-    function mostrarPagamento() {
-      document.getElementById('pagamento').style.display = 'block';
-    }
-  </script>
 </body>
 </html>

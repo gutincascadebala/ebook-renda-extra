@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compre o Guia de Renda Extra</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .buy-button {
+      background-color: #00c3ff;
+      color: #000;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      background-color: #00a8e0;
+    }
+
+    .payment-page {
+      display: none;
+      margin-top: 40px;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .qr {
+      margin: 20px 0;
+    }
+
+    .pix-code {
+      word-break: break-word;
+      background-color: #333;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Guia Prático: Ganhe Dinheiro em Casa</h1>
+    <p>Adquira agora por apenas <strong>R$ 5,00</strong> e descubra maneiras reais e acessíveis de gerar renda usando apenas seu celular ou computador.</p>
+    <a class="buy-button" onclick="mostrarPagamento()">Comprar Agora</a>
+
+    <div id="pagamento" class="payment-page">
+      <h2>Pagamento via PIX</h2>
+      <p>Escaneie o QR Code abaixo ou copie o código PIX:</p>
+      <div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=00020126360014BR.GOV.BCB.PIX0114+558598228543052040000530398654045.005802BR5925Jose%20Gutemberg%20Cordeiro%20A6009SAO%20PAULO62140510R8BhBNDB0X63046152" alt="QR Code PIX">
+      </div>
+      <p class="pix-code">00020126360014BR.GOV.BCB.PIX0114+558598228543052040000530398654045.005802BR5925Jose Gutemberg Cordeiro A6009SAO PAULO62140510R8BhBNDB0X63046152</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarPagamento() {
+      document.getElementById('pagamento').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
